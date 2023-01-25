@@ -29,6 +29,7 @@ const Home = ({navigation}) => {
   };
 
   useEffect(() => {
+    console.log("hello git");
     getRestaurantsFromYelpApi();
   }, [city]);
 

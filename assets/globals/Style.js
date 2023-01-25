@@ -22,6 +22,7 @@ module.exports = {
          marginBottom: 10,
      },
      btn2: {
+        
          width: 150,
          height: 50,
          backgroundColor: 'red',
@@ -32,8 +33,10 @@ module.exports = {
          color: 'white',
          margin: 10,
          alignSelf: 'center',
+          
      },
      hr80: {
+        
          width: '80%',
          borderBottomColor: '#E0E0E0',
          borderBottomWidth: 1,
@@ -84,7 +87,7 @@ module.exports = {
  
      },
      incdecinput: {
- 
+          
          backgroundColor: 'white',
          alignItems: 'center',
          justifyContent: 'center',
