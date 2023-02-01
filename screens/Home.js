@@ -21,7 +21,10 @@ const Home = ({navigation}) => {
     };
 
     fetch(yelpUrl, apiOptions)
-      .then(response => response.json())
+      .then(response => response.json()).then((res)=>{
+
+        setRestaurantData(res.businesses)
+      })
 
       .catch(e => {
         console.log(e);
@@ -29,7 +32,6 @@ const Home = ({navigation}) => {
   };
 
   useEffect(() => {
-    console.log("hello git");
     getRestaurantsFromYelpApi();
   }, [city]);
 
@@ -43,10 +45,7 @@ const Home = ({navigation}) => {
         <Categories />
         <RestaurantItem restaurantData={restaurantData} />
       </ScrollView>
-      {/* <View>
-          <Divider width={1}/>
-          <BottomTab/>
-          </View> */}
+      
     </View>
   );
 };
@@ -55,7 +54,7 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
     padding: 10,
     marginTop: 10,
     

@@ -38,15 +38,14 @@ export const localRestaurants = [
         },
  ]
 const RestaurantItem = (props) => {
-     console.log( Array.isArray(props.restaurantData));
    const navigation=  useNavigation();
 
      return (
          
-               !!props &&props.restaurantData.map((restaurants,index)=>{
+               props.restaurantData.map((restaurants,index)=>{
                
                     return (
-                       <TouchableOpacity onPress={()=>{navigation .navigate('RestaurantDetails',{
+                       <TouchableOpacity onPress={()=>{navigation.navigate('RestaurantDetails',{
                          name:restaurants.name,
                          image:restaurants.image_url,
                          price:restaurants.price,
